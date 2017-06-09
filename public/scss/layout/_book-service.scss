@@ -1,0 +1,32 @@
+/********************************************
+** SECTION BOOK SERVICE
+*********************************************/
+
+.section-book-service {
+    
+    background-image: url("../img/make-up-background.png");
+    height: 100vh;
+    background-position: top;
+    background-size: cover;
+    color: $white;
+
+    
+    .text-box {
+        float: right;
+        transform: translateX(30px);
+        opacity: 0;
+        transition: all 1.2s;
+        
+        &.show-text {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+    
+    h2 {
+        font-size: 170%;
+        text-align: left;
+        margin-top: 140px;
+        margin-bottom: 20px;
+    }
+}

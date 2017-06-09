@@ -1,0 +1,55 @@
+/********************************************
+** FOOTER
+*********************************************/
+
+footer {
+    padding: 35px;
+    font-size: 80%;
+    background-color: $blackFooter;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+    .nav-footer,
+    .socials {
+        list-style: none;
+        
+        li {
+            display: inline-block;
+            margin-right: 30px;
+            
+            a:link, a:visited {
+                text-decoration: none;
+                color: $gray; 
+                transition: all 0.3s;
+                
+                &:hover, &:active {
+                    color: $grayLight;
+                }
+            }
+        }
+        
+        &.socials {
+            float: right;
+            font-size: 140%;
+            
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            a {
+                @include socials;
+            }
+        }
+    }
+    
+    p {
+        color: $gray;
+        text-align: center;
+        padding: 30px;
+        font-size: 80%;
+    }
+    
+}
+
+

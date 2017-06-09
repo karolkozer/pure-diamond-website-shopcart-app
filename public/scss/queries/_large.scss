@@ -1,0 +1,22 @@
+$big: 1200px;
+
+@media only screen and (max-width: $big) {
+    
+    /*---------- BASE ----------*/
+    .row {
+        padding: 0 3%;
+    }
+    
+    .content {
+        margin-bottom: 190px;
+    }
+    
+    /*---------- HEADER ----------*/
+    header {
+        .hero-text-box {
+            padding: 0 3%;
+            width: 100%;
+        }
+    }
+    
+}

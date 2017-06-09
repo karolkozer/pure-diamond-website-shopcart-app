@@ -1,0 +1,57 @@
+/********************************************
+** MOBILE MENU
+*********************************************/
+.mobile-menu {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    z-index: 9000;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: $white;
+    padding: 90px 0;
+    font-size: 140%;
+    transition: all 0.5s ease-in-out;
+    
+    &.show-mobile-menu {
+        transform: translateX(100%);
+    }
+    
+    .mobile-content {
+        text-align: center;
+        width: 60%;
+        margin: 30px auto;
+       
+        
+        .mobile-nav {
+            list-style: none;
+            margin-top: 50px;
+            
+            li {
+                display: block;
+                margin-top: 35px;
+                transform: translateX(40px);
+                opacity: 0;
+                transition: all 0.8s ease-in-out;
+                
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    padding: 6px 14px;
+                    transition: all 0.2s ease-in-out;
+                    
+                    &:hover {
+                        background-color: $pink;
+                        color: $white;
+                    }
+                }
+                
+                &.show-mobile-nav {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

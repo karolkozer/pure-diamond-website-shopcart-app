@@ -1,0 +1,208 @@
+$small: 767px;
+
+@media only screen and (max-width: $small) {
+    
+    /*---------- BASE ----------*/
+    body {
+        font-size: 16px
+    }
+    
+    .content {
+        margin-bottom: 210px;
+    }
+    
+    section {
+        padding: 30px 0;
+    }
+    
+    .row {
+        padding: 0 4%;
+    }
+    
+    .col {
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+    
+    
+    /*---------- MOBILE MENU ----------*/
+    .menu-btn {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    /*---------- HEADER ----------*/
+    header {
+        
+        .hero-text-box {
+            padding: 0 4%;
+        }
+        
+        .hand-bag {
+            display: none;
+            width: 280px;
+            position: absolute;
+            right: 22%;
+            bottom: -2.5%;
+            transition: all 0.4s;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        // Style only for Firefox
+        @-moz-document url-prefix() {
+            .hand-bag {
+                width: 300px;
+                position: absolute;
+                right: 4%;
+                bottom: -7.5%;
+                transition: all 0.4s;
+            }
+        }
+        
+        /*---------- NAVIGATION ----------*/
+        nav {
+            .logo-nav {
+                margin-top: 48px;
+                display: none;
+            }
+
+            .shop-cart {
+                float: right;
+                margin-top: 36px;
+                vertical-align: middle;
+                line-height: 120%;
+                padding: 0 5px;
+                position: relative;
+                font-size: 140%;
+
+            }
+
+            .main-nav {
+                display: none;
+            }
+        }
+    }
+    
+    /*---------- SECTION PRODUCTS ----------*/
+    .section-products {
+
+        .item-box {
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.5s ease-in-out;
+            
+            .item-photo {
+                width: 100%;
+                overflow: hidden;
+
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+    
+    /*---------- SECTION PROMO ----------*/
+    .section-promo {
+
+        .bag {
+            position: absolute;
+            right: -0.5%;
+            bottom: -14%;
+            width: 460px;
+            @include imgWidth;
+        }
+
+        .sunglasses {
+            position: absolute;
+            left: 42%;
+            bottom: 12%;;
+            transform: translate(-50%, 0);
+            width: 170px;
+            @include imgWidth;
+        }
+
+        .lipstick,
+        .lipstick-package {
+           display: none;
+        }
+
+    }
+    
+    /*---------- FOOTER ----------*/
+    footer {
+        padding: 45px;
+        font-size: 80%;
+        background-color: $blackFooter;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+
+        .nav-footer,
+        .socials {
+            list-style: none;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                margin-right: 30px;
+
+                a:link, a:visited {
+                    text-decoration: none;
+                    color: $gray; 
+                    transition: all 0.3s;
+
+                    &:hover, &:active {
+                        color: $grayLight;
+                    }
+                }
+            }
+
+            &.socials {
+                font-size: 140%;
+                float: none;
+                display: block;
+                text-align: center;
+
+                li {
+                 &:last-child {
+                    margin-right: 0;
+                    }   
+                }
+            }
+        }
+
+        p {
+            color: $gray;
+            text-align: center;
+            padding: 15px;
+            font-size: 80%;
+        }
+
+    }
+    
+    /*---------- SHOP CART----------*/
+    .sliding-cart-content {
+        font-size: 120%;
+        position: fixed;
+        right: -500px;
+        padding: 90px 25px;
+        padding-bottom: 150px;
+
+        .items-total-price {
+            clear: both;
+            text-align: right;
+            padding-top: 20px;
+            padding-right: 35px;
+        }
+    }
+}

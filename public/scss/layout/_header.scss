@@ -1,0 +1,50 @@
+/********************************************
+** HEADER
+*********************************************/
+
+
+header {
+    background-color: $pink;
+    height: 100vh;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 120% 85%, 0% 100%);
+    overflow: hidden;
+//    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 650% 0%);
+    
+    
+    .hero-text-box {
+//        border: 1px solid blue;
+        width: 1040px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .hand-bag {
+        width: 420px;
+        position: absolute;
+        right: 8%;
+        bottom: -1.5%;
+        transition: all 0.4s;
+        
+        img {
+            width: 100%;
+        }
+    }
+    
+    // Style only for Firefox
+    @-moz-document url-prefix() {
+        .hand-bag {
+            width: 420px;
+            position: absolute;
+            right: 8%;
+            bottom: -6.5%;
+            transition: all 0.4s;
+        }
+    }
+    
+}
+
+
+

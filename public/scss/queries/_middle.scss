@@ -1,0 +1,83 @@
+$middle: 1023px;
+
+@media only screen and (max-width: $middle) {
+    
+    /*---------- BASE ----------*/
+    body {
+        font-size: 18px
+    }
+    
+    .content {
+        margin-bottom: 184px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    /*---------- HEADER ----------*/
+    header {
+        .hand-bag {
+            width: 340px;
+            position: absolute;
+            right: 4%;
+            bottom: 0.5%;
+            transition: all 0.4s;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        // Style only for Firefox
+        @-moz-document url-prefix() {
+            .hand-bag {
+                width: 340px;
+                position: absolute;
+                right: 4%;
+                bottom: -7.5%;
+                transition: all 0.4s;
+            }
+        }
+    }
+    
+    /*---------- SECTION PROMO ----------*/
+    .section-promo {
+
+        .bag {
+            position: absolute;
+            right: -0.5%;
+            bottom: -14%;
+            width: 490px;
+            @include imgWidth;
+        }
+
+        .sunglasses {
+            position: absolute;
+            left: 42%;
+            bottom: 5%;;
+            transform: translate(-50%, 0);
+            width: 190px;
+            @include imgWidth;
+        }
+
+        .lipstick {
+            position: absolute;
+            top: 26%;
+            left: 60%;
+            transform: translate(70%, 0);
+            width: 65px;
+            @include imgWidth;
+        }
+
+        .lipstick-package {
+            position: absolute;
+            width: 28px;
+            top: 28%;
+            left: 55%;
+            transform: translate(650%, 0);
+            @include imgWidth;
+        }
+
+    } 
+}

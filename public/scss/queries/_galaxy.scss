@@ -1,0 +1,127 @@
+$galaxyMinWidth: 360px;
+$galaxyMaxWidth: 640px;
+
+/* ----------- Galaxy S5 ----------- */
+/* Portrait */
+@media screen 
+and (device-width: $galaxyMinWidth) 
+and (device-height: $galaxyMaxWidth) 
+and (-webkit-device-pixel-ratio: 3) 
+and (orientation: portrait) {
+    
+    /*---------- SECTION PROMO ----------*/
+    .section-promo {
+
+        .bag {
+            position: absolute;
+            right: -8.5%;
+            bottom: -10%;
+            width: 380px;
+            @include imgWidth;
+        }
+
+        .sunglasses {
+            position: absolute;
+            left: 62%;
+            bottom: 8%;;
+            transform: translate(-50%, 0);
+            width: 140px;
+            @include imgWidth;
+        }
+
+        .lipstick,
+        .lipstick-package {
+           display: none;
+        }
+
+    }
+    
+    /*---------- SECTION BOOK SERVICE ----------*/
+    .section-book-service {
+    
+        background-image:linear-gradient(rgba(0, 0, 0, 0.12) , rgba(0, 0, 0, 0.12)), url("../img/make-up-background.png");
+        height: 100vh;
+        background-position: right;
+    }
+    
+    /*---------- FOOTER ----------*/
+    footer {
+        .nav-footer {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin-right: 16px;
+                margin-bottom: 10px;
+            }
+        }
+        
+        .socials {
+            li {
+                margin-right: 25px;
+            }
+        }
+    }
+    
+    
+    /*---------- SHOP CART----------*/
+    .sliding-cart-content {
+        width: 100%;
+        font-size: 110%;
+        position: fixed;
+        padding: 90px 20px;
+        padding-bottom: 150px;
+
+        .cart-items {
+            /*----- Item -----*/
+            .item {
+                list-style: none;
+                width: 400px;
+
+                li {
+                    display: inline-block;
+                    height: 110px;
+                    float: left;
+                    width: 140px;
+                    padding: 20px 6px 0 6px;
+                    border-bottom: 1px solid $grayLightWhite;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &:nth-of-type(2n) {
+                       text-align: center;
+                        width: 100px
+                    }
+
+                    &:last-child {
+                        text-align: center;
+                    }
+
+                    .change-qty {
+                        width: 40px;
+                        border: 0;
+                        text-align: center;
+                        font-size: 98%;
+                        font-weight: 300;
+                        outline: none;
+                    }
+
+                    .btn-remove-item {
+                        margin-top: 40%;
+                    }
+                } 
+            }
+        }
+        
+        
+        .items-total-price {
+            clear: both;
+            text-align: right;
+            padding-top: 20px;
+            padding-right: 10px;
+        }
+    }
+
+}

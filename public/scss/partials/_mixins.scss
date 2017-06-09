@@ -1,0 +1,13 @@
+@mixin imgWidth {
+    img {
+        width: 100%;
+    }
+}
+
+@mixin socials {
+    @for $i from 1 through length($SocialColors) {
+        .social-#{$i}:hover {
+            color: nth($SocialColors, $i);
+        }
+    }
+}

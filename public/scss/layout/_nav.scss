@@ -1,0 +1,88 @@
+/********************************************
+** NAVIGATION
+*********************************************/
+
+header {
+    nav {
+    
+//        border: 1px solid blue;
+
+        .logo-nav {
+            margin-top: 48px;
+        }
+
+        .shop-cart {
+            float: right;
+            margin-top: 42px;
+            vertical-align: middle;
+            line-height: 120%;
+            padding: 0 5px;
+            position: relative;
+            
+            &:hover {
+                .ion-bag {
+                    color: $black;
+                }
+            }
+            
+            .cart-notification {
+                display: none;
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: $yellow;
+                border-radius: 50%;
+                position: absolute;
+                top: 6%;
+                right: 12%;
+                
+                &.show-notification {
+                    display: block;
+                }
+            }
+        }
+
+        .main-nav {
+            list-style: none;
+            float: right;
+            margin-top: 42px;
+
+            li {
+                display: inline-block;
+                margin-right: 30px;
+
+                a:link, a:visited {
+                    font-size: 90%;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $white;
+                    padding: 8px 0;
+                }
+
+                a:link::after, 
+                a:visited::after {
+                    content: "";
+                    display: block;
+                    padding-top: 8px;
+                    border-bottom: 2px solid $white;
+                    width: 0px;
+                    margin: 0 auto;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                a:hover::after, 
+                a:active::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

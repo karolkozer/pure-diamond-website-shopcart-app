@@ -1,0 +1,79 @@
+$font-family: 'Roboto', sans-serif;
+$base-font-size: 20px;
+
+%baseStyle {
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h1 {
+    @extend %baseStyle;
+    font-size: 240%;
+    color: $white;
+    word-spacing: 4px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h2 {
+    @extend %baseStyle;
+    font-size: 180%;
+    text-align: center;
+    word-spacing: 2px;
+    margin-bottom: 60px;
+}
+
+h3 {
+    @extend %baseStyle;
+    font-size: 100%;
+    margin-bottom: 2px;
+}
+
+/*-------- PARAGRAPHS --------*/
+.description {
+    font-size: 80%;
+    line-height: 145%;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-weight: 400;
+    line-height: 145%;
+}
+
+
+.item-name {
+    @extend .description;
+    font-size: 70%;
+}
+
+.item-company {
+    @extend .description;
+    text-transform: uppercase;
+    font-size: 65%;
+}
+
+.item-subtotal-price {
+    @extend .price;
+    font-size: 90%;
+}
+
+.item-qty {
+    @extend .description;
+    font-size: 70%;
+}
+
+.items-total-price {
+    span {
+        margin-left: 5px;
+        font-weight: 300;
+    }
+}
+
+/*-------- ICONS --------*/
+.ion-bag {
+    font-size: 130%;
+    color: $white;
+    transition: all 0.3s;
+}

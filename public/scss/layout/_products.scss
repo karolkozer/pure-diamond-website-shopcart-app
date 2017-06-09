@@ -1,0 +1,39 @@
+/********************************************
+** SECTION PRODUCTS
+*********************************************/
+.section-products {
+    
+    text-align: center;
+    
+    .item-box {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateX(30px);
+        transition: all 0.5s ease-in-out;
+        
+        &.show {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        
+        .item-photo {
+            width: 100%;
+            overflow: hidden;
+            
+            img {
+                border: 1px solid transparent;
+                width: 80%;
+                height: auto;
+                margin-bottom: 20px;
+                transform: scale(1);
+                transition: all 0.4s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.08);
+                }
+            }
+        }
+    }
+}

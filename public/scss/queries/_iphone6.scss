@@ -1,0 +1,293 @@
+$iPhoneMinWidth: 375px;
+$iPhoneMaxWidth: 667px;
+
+/* ----------- iPhone 6 ----------- */
+/* Portrait */
+@media only screen 
+and (min-device-width: $iPhoneMinWidth) 
+and (max-device-width: $iPhoneMaxWidth) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) { 
+    
+    /*---------- BASE ----------*/
+    section {
+        padding: 25px 0;
+    }
+    
+    /*---------- HEADER ----------*/
+    header {
+        
+        .hero-text-box {
+            padding: 0 8%;
+            
+            h1 {
+                font-size: 180%;
+                margin-bottom: 30px;
+            }
+        }
+        
+        .hand-bag {
+            display: none;
+            width: 280px;
+            position: absolute;
+            right: 22%;
+            bottom: -2.5%;
+            transition: all 0.4s;
+
+            img {
+                width: 100%;
+            }
+        }
+        
+        /*------- BTN FULL -------*/
+        .btn-full {
+
+            &:link,
+            &:visited {
+                display: inline-block;
+                margin-top: 6px;
+            }
+        }
+
+        // Style only for Firefox
+        @-moz-document url-prefix() {
+            .hand-bag {
+                width: 300px;
+                position: absolute;
+                right: 4%;
+                bottom: -7.5%;
+                transition: all 0.4s;
+            }
+        }
+        
+        /*---------- NAVIGATION ----------*/
+        nav {
+            .logo-nav {
+                margin-top: 48px;
+                display: none;
+            }
+
+            .shop-cart {
+                float: right;
+                margin-top: 36px;
+                vertical-align: middle;
+                line-height: 120%;
+                padding: 0 5px;
+                position: relative;
+                font-size: 140%;
+
+            }
+
+            .main-nav {
+                display: none;
+            }
+        }
+    }
+    
+    /*---------- SECTION PROMO ----------*/
+    .section-promo {
+        
+        h2 {
+            font-size: 168%;
+        }
+
+        .bag {
+            position: absolute;
+            right: -4%;
+            bottom: -10%;
+            width: 390px;
+            @include imgWidth;
+        }
+
+        .sunglasses {
+            left: 72%;
+            width: 150px;
+        }
+
+    }
+    
+    /*---------- SECTION BOOK SERVICE ----------*/
+    .section-book-service {
+    
+        background-image:linear-gradient(rgba(0, 0, 0, 0.12) , rgba(0, 0, 0, 0.12)), url("../img/make-up-background.png");
+        height: 100vh;
+        background-position: center top;
+    }
+    
+    
+    /*---------- FOOTER ----------*/
+    footer {
+        .nav-footer {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin-right: 25px;
+                margin-bottom: 10px;
+            }
+        }
+        
+        .socials {
+            li {
+                margin-right: 35px;
+            }
+        }
+    }
+    
+    
+    
+    /*---------- SHOP CART----------*/
+    .sliding-cart-content {
+        width: 100%;
+        font-size: 110%;
+        position: fixed;
+        padding: 90px 20px;
+        padding-bottom: 150px;
+
+        .cart-items {
+            /*----- Item -----*/
+            .item {
+                list-style: none;
+                width: 400px;
+
+                li {
+                    display: inline-block;
+                    height: 110px;
+                    float: left;
+                    width: 140px;
+                    padding: 20px 6px 0 6px;
+                    border-bottom: 1px solid $grayLightWhite;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &:nth-of-type(2n) {
+                       text-align: center;
+                        width: 120px;
+                    }
+
+                    &:last-child {
+                        text-align: center;
+                    }
+
+                    .change-qty {
+                        width: 40px;
+                        border: 0;
+                        text-align: center;
+                        font-size: 98%;
+                        font-weight: 300;
+                        outline: none;
+                    }
+
+                    .btn-remove-item {
+                        margin-top: 40%;
+                    }
+                } 
+            }
+        }
+        
+        
+        .items-total-price {
+            clear: both;
+            text-align: right;
+            padding-top: 20px;
+            padding-right: 0px;
+        }
+    }
+
+}
+
+/* ----------- iPhone 6 Plus ----------- */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) { 
+    
+    /*---------- HEADER ----------*/
+    header {
+        
+        .hero-text-box {
+            padding: 0 8%;
+            
+            h1 {
+                font-size: 200%;
+                margin-bottom: 30px;
+            }
+        }
+        
+        .hand-bag {
+            display: none;
+            width: 280px;
+            position: absolute;
+            right: 22%;
+            bottom: -2.5%;
+            transition: all 0.4s;
+
+            img {
+                width: 100%;
+            }
+        }
+    
+    }
+    
+    /*---------- SHOP CART----------*/
+    .sliding-cart-content {
+        width: 100%;
+        font-size: 110%;
+        position: fixed;
+        padding: 90px 20px;
+        padding-bottom: 150px;
+
+        .cart-items {
+            /*----- Item -----*/
+            .item {
+                list-style: none;
+                width: 400px;
+
+                li {
+                    display: inline-block;
+                    height: 110px;
+                    float: left;
+                    width: 140px;
+                    padding: 20px 6px 0 6px;
+                    border-bottom: 1px solid $grayLightWhite;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &:nth-of-type(2n) {
+                       text-align: center;
+                        width: 140px;
+                    }
+
+                    &:last-child {
+                        text-align: center;
+                    }
+
+                    .change-qty {
+                        width: 40px;
+                        border: 0;
+                        text-align: center;
+                        font-size: 98%;
+                        font-weight: 300;
+                        outline: none;
+                    }
+
+                    .btn-remove-item {
+                        margin-top: 40%;
+                    }
+                } 
+            }
+        }
+        
+        
+        .items-total-price {
+            clear: both;
+            text-align: right;
+            padding-top: 20px;
+            padding-right: 30px;
+        }
+    }
+}
